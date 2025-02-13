@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RecipesComponent } from './components/recipes/recipes.component';
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'recipes'},
   { path: 'recipes', component: RecipesComponent }
 ];
 
