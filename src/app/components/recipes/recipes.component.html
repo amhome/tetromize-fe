@@ -1,4 +1,6 @@
 
+<input type="text" name="term" [(ngModel)]="searchTerm" (change)="search()" placeholder="Search ..."/>
+
 <div class="grid-container">
     <figure *ngFor="let r of records">
         <img [src]="r.image" />

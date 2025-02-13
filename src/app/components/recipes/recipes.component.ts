@@ -9,7 +9,9 @@ import { DataProviderService } from '../../services/data-provider.service';
 })
 export class RecipesComponent implements OnInit{
 
+  private _records: IRecipe[] = [];
   records: IRecipe[] = [];
+  searchTerm?: string;
 
   constructor(private _dataService: DataProviderService) { }
   
@@ -18,6 +20,14 @@ export class RecipesComponent implements OnInit{
   }
 
   getAll() {
-    this._dataService.getRecipes().subscribe(resp => this.records = resp);
+    this._dataService.getRecipes().subscribe(resp => {
+      this._records = resp;
+      this.records = resp;
+    });
   }
+
+  search() {
+    this.records = this._records.filter(x => x.name.includes(this.searchTerm || ''));
+  }
+
 }
