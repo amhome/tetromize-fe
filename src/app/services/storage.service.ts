@@ -26,4 +26,10 @@ export class StorageService {
     const storage = window.sessionStorage.getItem(RECIPE_KEY);
     return storage ? JSON.parse(storage) : [];
   }
+
+  public removeRecipe(item: IRecipe) {
+    var recipes = this.getRecipes();
+    recipes.splice(recipes.indexOf(item), 1);
+    window.sessionStorage.setItem(RECIPE_KEY, JSON.stringify(recipes));
+  }
 }

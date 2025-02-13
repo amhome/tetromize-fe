@@ -7,12 +7,14 @@ import { RecipesComponent } from './components/recipes/recipes.component';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from './directives/highlight.directive';
+import { BookmarksComponent } from './components/bookmarks/bookmarks.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecipesComponent,
-    HighlightDirective
+    HighlightDirective,
+    BookmarksComponent
   ],
   imports: [
     BrowserModule,
