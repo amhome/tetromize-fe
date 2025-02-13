@@ -21,9 +21,12 @@ export class RecipesComponent implements OnInit{
   }
 
   getAll() {
-    this._dataService.getRecipes().subscribe(resp => {
-      this._records = resp;
+    this._dataService.getRecipes().subscribe({
+      next: resp => {
+        this._records = resp;
       this.records = resp;
+      },
+      error: err => alert(err)
     });
   }
 
