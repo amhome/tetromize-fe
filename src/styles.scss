@@ -1,2 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'simpledotcss/simple.min.css';
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 0.875rem;
+    padding: 0.875rem;
+}
+
+.grid-container>figure {
+    background-color: #f1f1f1;
+    color: #000;
+    padding: 0.875rem;
+    text-align: center;
+}

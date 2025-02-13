@@ -1,6 +1,6 @@
 [
-    {"name": "Recipe A", "image": "", "instruction": "Lorem ipsum dolor sit amet"},
-    {"name": "Recipe B", "image": "", "instruction": "Lorem ipsum dolor sit amet"},
-    {"name": "Recipe C", "image": "", "instruction": "Lorem ipsum dolor sit amet"},
-    {"name": "Recipe D", "image": "", "instruction": "Lorem ipsum dolor sit amet"}
+    {"name": "Recipe A", "image": "https://picsum.photos/id/237/200/300", "instruction": "Lorem ipsum dolor sit amet"},
+    {"name": "Recipe B", "image": "https://picsum.photos/id/238/200/300", "instruction": "Lorem ipsum dolor sit amet"},
+    {"name": "Recipe C", "image": "https://picsum.photos/id/239/200/300", "instruction": "Lorem ipsum dolor sit amet"},
+    {"name": "Recipe D", "image": "https://picsum.photos/id/240/200/300", "instruction": "Lorem ipsum dolor sit amet"}
 ]
