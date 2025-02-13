@@ -1,1 +1,8 @@
-<p>recipes works!</p>
+
+<div class="grid-container">
+    <figure *ngFor="let r of records">
+        <img [src]="r.image" />
+        <h5>{{r.name}}</h5>
+        <p>{{r.instruction}}</p>
+    </figure>
+</div>
