@@ -4,7 +4,7 @@
 <div class="grid-container">
     <figure *ngFor="let r of records">
         <img [src]="r.image" />
-        <h5>{{r.name}}</h5>
+        <h5 appHighlight [searchTerm]="searchTerm" [fullText]="r.name"></h5>
         <p>{{r.instruction}}</p>
     </figure>
 </div>

@@ -11,7 +11,7 @@ export class RecipesComponent implements OnInit{
 
   private _records: IRecipe[] = [];
   records: IRecipe[] = [];
-  searchTerm?: string;
+  searchTerm: string = '';
 
   constructor(private _dataService: DataProviderService) { }
   
@@ -27,7 +27,7 @@ export class RecipesComponent implements OnInit{
   }
 
   search() {
-    this.records = this._records.filter(x => x.name.includes(this.searchTerm || ''));
+    this.records = this._records.filter(x => x.name.includes(this.searchTerm));
   }
 
 }

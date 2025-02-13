@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RecipesComponent
+    RecipesComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
