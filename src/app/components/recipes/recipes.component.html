@@ -6,5 +6,6 @@
         <img [src]="r.image" />
         <h5 appHighlight [searchTerm]="searchTerm" [fullText]="r.name"></h5>
         <p>{{r.instruction}}</p>
+        <button type="button" (click)="save(r)">Save</button>
     </figure>
 </div>

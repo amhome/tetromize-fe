@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IRecipe } from '../../interfaces/recipe.interface';
 import { DataProviderService } from '../../services/data-provider.service';
+import { StorageService } from '../../services/storage.service';
 
 @Component({
   selector: 'app-recipes',
@@ -13,7 +14,7 @@ export class RecipesComponent implements OnInit{
   records: IRecipe[] = [];
   searchTerm: string = '';
 
-  constructor(private _dataService: DataProviderService) { }
+  constructor(private _dataService: DataProviderService, private _storageService: StorageService) { }
   
   ngOnInit(): void {
     this.getAll();
@@ -28,6 +29,11 @@ export class RecipesComponent implements OnInit{
 
   search() {
     this.records = this._records.filter(x => x.name.includes(this.searchTerm));
+  }
+
+
+  save(item: IRecipe) {
+    this._storageService.addRecipe(item);
   }
 
 }
