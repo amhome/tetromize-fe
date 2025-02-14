@@ -1,5 +1,5 @@
 
-<input type="text" name="term" [(ngModel)]="searchTerm" (change)="search()" placeholder="Search ..."/>
+<input type="text" name="term" [(ngModel)]="searchTerm" (keyup)="search()" placeholder="Search ..."/>
 
 <div class="grid-container">
     <figure *ngFor="let r of records">
